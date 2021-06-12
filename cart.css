@@ -348,6 +348,7 @@ h6>div{
         top: 0rem; 
     }
     div.summary{
+        background-color: white;
         width: 25rem;
         height: 30rem;
         /* float: right; */
