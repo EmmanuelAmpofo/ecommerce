@@ -1,10 +1,4 @@
 
-
-/** Demo ecommerce product page using HTML,CSS, and JavaScript.
- *  Functional Cart page to handle customer order
- *  OOP approach
- *  !!innocode!in!action!!
- **/
  let quantityTag=document.getElementById('display-quantity');   //moved from module
  let currentQuantity = +quantityTag.innerText;                   //moved from module, calls and records the quantity
  const adder = document.getElementById('add');                    //moved from module
@@ -44,64 +38,64 @@ if(OnDisplayNow===""){
 pictureList[movementTracker].style.display='block';
 OnDisplayNow = "green";
 }
-else if(OnDisplayNow==="green"){loadGreenShirt();pictureList[movementTracker].style.display='block';
+else if(OnDisplayNow==="green"){loadGraySneaker();pictureList[movementTracker].style.display='block';
 }
-else{loadBlueShirt();pictureList[movementTracker].style.display='block';
+else{loadBlueSneaker();pictureList[movementTracker].style.display='block';
 }
 
 
 
-GreenShirt={                                                      //greenshirt product object
-    banner:"Classic Fit Solid Shirt",
-    images:['images/green-shirt.jpg','images/green-unfold.jpg','green-worn.jpg','green-worn2.jpg'],
-    price:"95",
+GraySneaker={                                                      //graysneaker product object
+    banner:"Nike AirForce 1",
+    images:['images/NikeAirforceGray.jpg','images/NikeAirforce.jpg'],
+    price:"Ghc100",
     className:"product-image",
-    productInfo: "Color: Surplus Green",
+    productInfo: "Color: Gray",
     color:"#8a9591"
 }
-BlueShirt={                                                      //blueshirt product object
-    banner:"Classic Fit Solid Shirt",
-    price:"120",
-    images:['images/blue-shirt.jpg', 'images/blue-unfold.jpg'],
+BlueSneaker={                                                      //blueSneaker product object
+    banner:"Nike Airforce 1",
+    price:"Ghc150",
+    images:['images/NikeAirforceBlue.jpg', 'images/NikeAirforceBlue1.jpg'],
     className: "product-image",
-    productInfo: "Color: Blue Blazer" ,
-    color:"#485b7c" 
+    productInfo: "Color: Blue" ,
+    color:"#1861e0" 
 }
-let loadGreenShirt=()=>{                                        //greenshirt loader function
+let loadGraySneaker=()=>{                                        //graysneaker loader function
    
     deleteCurrentImages("product-image");
-    for(let i=GreenShirt.images.length; i>=0;i--){
+    for(let i=GraySneaker.images.length; i>=0;i--){
     let newImage=document.createElement("img");
-    newImage.src=GreenShirt.images[i];
-    newImage.className=GreenShirt.className;
+    newImage.src=GraySneaker.images[i];
+    newImage.className=GraySneaker.className;
     imageParentDiv.insertBefore(newImage,pictureList[0])
     }
     pictureList[movementTracker].style.display='block';
-    productName.innerHTML = GreenShirt.banner;
-    productPrice.innerHTML = GreenShirt.price;
-    colorDescription.innerHTML = GreenShirt.productInfo;
+    productName.innerHTML = GraySneaker.banner;
+    productPrice.innerHTML = GraySneaker.price;
+    colorDescription.innerHTML = GraySneaker.productInfo;
     OnDisplayNow = "green";
 }
 
-let loadBlueShirt=()=>{                                      //blueshirt loader function
+let loadBlueSneaker=()=>{                                      //bluesneaker loader function
     console.log('blue');
     deleteCurrentImages("product-image");
-    for(let i=BlueShirt.images.length-1; i>=0;i--){
+    for(let i=BlueSneaker.images.length-1; i>=0;i--){
     let newImage=document.createElement("img");
-    newImage.src=BlueShirt.images[i];
-    newImage.className=GreenShirt.className;
+    newImage.src=BlueSneaker.images[i];
+    newImage.className=GraySneaker.className;
     console.log(newImage);
     imageParentDiv.insertBefore(newImage,pictureList[0])
     }
     pictureList[movementTracker].style.display='block';
-    productName.innerHTML = BlueShirt.banner;
-    productPrice.innerHTML = BlueShirt.price;
-    colorDescription.innerHTML = BlueShirt.productInfo;
+    productName.innerHTML = BlueSneaker.banner;
+    productPrice.innerHTML = BlueSneaker.price;
+    colorDescription.innerHTML = BlueSneaker.productInfo;
     OnDisplayNow = "blue";
 }
 
-colorBtn1.addEventListener("click",(e)=>{  loadGreenShirt();}); // trigger on the color choice events
-colorBtn2.addEventListener("click",(e)=>{ loadBlueShirt();});
+colorBtn1.addEventListener("click",(e)=>{  loadGraySneaker();}); // trigger on the color choice events
+colorBtn2.addEventListener("click",(e)=>{ loadBlueSneaker();});
 
 let deleteCurrentImages=(imageClassName)=>{
     const elements = document.getElementsByClassName(imageClassName);
@@ -161,7 +155,7 @@ const sizehandler=()=>{
 sizehandler();
 
 
-function quantityControl(operator){   //quantity control function       
+function Control(operator){   //quantity control function       
     if (operator==='minus' && currentQuantity>1) {
         console.log('minus clicked')
         currentQuantity--;
@@ -261,10 +255,10 @@ function orderHandler(){
     function imageLink(){
         let theUrl;
         if(OnDisplayNow==='green'){
-            theUrl=GreenShirt.images[1];
+            theUrl=GraySneaker.images[1];
         }
         else{
-            theUrl=BlueShirt.images[1];
+            theUrl=BlueSneaker.images[1];
         }
         return theUrl;
     }

@@ -171,7 +171,7 @@ function htmlFormat(c){
         <button onclick="changeQty(${c})" >Update</button></p>
     </select>
     <h6><div>Unit price</div><br><div id="unit_price${c}">120</div></h6> &nbsp;&nbsp;&nbsp;
-    <h6><div>Total Price</div> <br><div id="total_price${c}">$120</div></h6>
+    <h6><div>Total Price</div> <br><div id="total_price${c}">Ghc120</div></h6>
     <div class="right">
         <div class="chckbx">
             <input type="checkbox"> Free gift package?

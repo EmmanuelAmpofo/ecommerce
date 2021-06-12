@@ -238,7 +238,7 @@ display: none;
         background-color: #8a9591;
         }
         #color2{
-        background-color: #485b7c;
+        background-color: #1861e0;
         }
 
     .quantity{  
@@ -254,7 +254,6 @@ display: none;
         padding-bottom: 0px;
     }
     
- 
     #display-quantity, #remove, #add{
     display: inline-block ;
     height: 4vw;
