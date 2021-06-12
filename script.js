@@ -48,14 +48,14 @@ else{loadBlueSneaker();pictureList[movementTracker].style.display='block';
 GraySneaker={                                                      //graysneaker product object
     banner:"Nike AirForce 1",
     images:['images/NikeAirforceGray.jpg','images/NikeAirforce.jpg'],
-    price:"Ghc100",
+    price:"$100",
     className:"product-image",
     productInfo: "Color: Gray",
     color:"#8a9591"
 }
 BlueSneaker={                                                      //blueSneaker product object
     banner:"Nike Airforce 1",
-    price:"Ghc150",
+    price:"$150",
     images:['images/NikeAirforceBlue.jpg', 'images/NikeAirforceBlue1.jpg'],
     className: "product-image",
     productInfo: "Color: Blue" ,
